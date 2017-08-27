@@ -20,9 +20,15 @@ export const getBooksFromFakeXHR = () => new Promise((resolve, reject) => {
 });
 
 export const addBookToFakeXHR = (book) => new Promise((resolve, reject) => {
+  console.log(book);
   setTimeout(() => {
     book._id = Math.random();
+    console.log('pushing into array');
     booksFromFakeDB.push(book);
+    console.log(booksFromFakeDB);
     resolve(booksFromFakeDB);
   }, 500);
 });
+
+
+
